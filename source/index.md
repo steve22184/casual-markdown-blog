@@ -27,7 +27,7 @@ h1 { border-bottom:1px dotted grey }
 <div id="md-post">
 # Featured
 
-## [Zigbee relay DIY](20240418-Zigbee-relay-in-wall-socket-box)
+## [Zigbee relay DIY](20240418-Zigbee-relay-in-wall-socket-box.md)
 > ![zigbee wall relay](./offline_pictures/zigbee_relay20.jpg)
 > date:2022/09/27, tags: `#zigbee`
 > 
@@ -43,6 +43,10 @@ h1 { border-bottom:1px dotted grey }
 
 
 # Archives
+
+### Apr 2024
+
+* 2024/04/18: [Zigbee relay DIY](20240418-Zigbee-relay-in-wall-socket-box.md) { #zigbee }
 
 ### Sep 2022
 
