@@ -27,9 +27,9 @@ h1 { border-bottom:1px dotted grey }
 <div id="md-post">
 # Featured
 
-## [Build online resume by markdown](20220927-markdown-as-resume.md)
+## [Zigbee relay DIY](20240418-Zigbee-relay-in-wall-socket-box)
 > ![markdown resume](http://casualwriter.github.io/casual-markdown/casual-markdown-cv.png)
-> date:2022/09/27, tags: `#markdown`
+> date:2022/09/27, tags: `#zigbee`
 > 
 > build blog site by markdown files in minutes.
 > host on github, or other static web hosting  
