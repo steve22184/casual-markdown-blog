@@ -1,5 +1,5 @@
 -----------------------------------------------------------------------------
-github     : https://github.com/casualwriter/casual-markdown-blog
+github     : https://github.com/steve22184/casual-markdown-blog
 title      : Casual-Markdown's Blog 
 subtitle   : Simple is the best
 nav-group  : featured, new-3, tags, months
@@ -7,7 +7,7 @@ nav-width  : 320px
 css-header : background:linear-gradient(to bottom right, #06c, #fc0); color:white
 menu       : 
    Home    : ?
-   github  : https://github.com/casualwriter/casual-markdown-blog
+   github  : https://github.com/steve22184/casual-markdown-blog
    Dark    : javascript:darkmode()
    About   : ?page=about.md
 -----------------------------------------------------------------------------
@@ -28,7 +28,7 @@ h1 { border-bottom:1px dotted grey }
 # Featured
 
 ## [Zigbee relay DIY](20240418-Zigbee-relay-in-wall-socket-box)
-> ![markdown resume](http://casualwriter.github.io/casual-markdown/casual-markdown-cv.png)
+> ![zigbee wall relay](./offline_pictures/zigbee_relay20.jpg)
 > date:2022/09/27, tags: `#zigbee`
 > 
 > build blog site by markdown files in minutes.
