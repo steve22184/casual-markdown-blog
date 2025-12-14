@@ -10,4 +10,4 @@ like all simple things, working on simple, lightweight, independence, portable s
 
 ### History
                     
-* 2022/08/24: 0.60, initial release. 
+* 2025/12/14: v0.1, initial release. 
