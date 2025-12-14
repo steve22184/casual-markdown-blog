@@ -39,7 +39,7 @@ h1 { border-bottom:1px dotted grey }
 
 ### Apr 2024
 
-* 2024/04/18: [Zigbee relay DIY](20240418-Zigbee-relay-in-wall-socket-box.md) { #zigbee }
+* 2024/04/18: [Zigbee relay DIY](20240418-Zigbee-relay-in-wall-socket-box.md) { #zigbee, #featured }
 
 ### Sep 2022
 
@@ -47,7 +47,7 @@ h1 { border-bottom:1px dotted grey }
    
 ### Aug 2022
                     
-* 2022/08/20: [Markdown as blog](20220820-markdown-as-blog.md) { #markdown, #featured }
+* 2022/08/20: [Markdown as blog](20220820-markdown-as-blog.md) { #markdown }
 * 2022/08/10: [Is RegExp readable?](20220810-is-regexp-readable.md) { #regexp }
 
 ### July 2022
