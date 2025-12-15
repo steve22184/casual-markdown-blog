@@ -36,21 +36,76 @@ nav li { margin-left:12px }
   #left-panel 	{ display:none; position:absolute; left:0px!important; width:100%!important; top:100px; padding:4px 8px }
   #right-panel 	{ position:absolute; left:0px!important; width:100%; top:100px; overflow:auto; padding:4px 8px }
 }
-  /* ---- image size override ---- */
+  /* ---- image size override ---- 
   img {
     max-width: 100%;
-    width: auto;   /* prevents upscaling small images */
+    width: auto;   /* prevents upscaling small images 
   }
-    /* ---- text spacing override ---- */
+    /* ---- text spacing override ---- 
   #right-panel {
     max-width: 150ch;
   /*  margin-left: auto;
-    margin-right: auto; */
+    margin-right: auto; 
     line-height: 1.9;
   }
 
   #right-panel p {
-    margin-bottom: 1.2em;
+    margin-bottom: 1.2em; */
+
+  /* ——————————————
+   readable typography
+   —————————————— */
+
+/* improve body font size & colour */
+body {
+  font-size: 16px;
+  color: #f0f0f0; /* light on dark theme — adjust if needed */
+}
+
+/* center and constrain the text area */
+#right-panel > * {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* section spacing for better content flow */
+#right-panel h1,
+#right-panel h2,
+#right-panel h3 {
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+}
+
+#right-panel p {
+  margin-bottom: 1.4em;
+  line-height: 1.75;
+}
+
+/* code blocks */
+#right-panel pre {
+  background: #2d2d2d;
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+/* images scaled inside text */
+#right-panel img {
+  display: block;
+  margin: 1.4em auto;
+  max-width: 100%;
+}
+
+/* blockquotes — optional */
+#right-panel blockquote {
+  padding-left: 1em;
+  border-left: 4px solid #555;
+  color: #ccc;
+}
+
   }
 </style>
 
