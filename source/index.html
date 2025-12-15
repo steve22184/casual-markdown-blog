@@ -52,25 +52,21 @@ nav li { margin-left:12px }
   #right-panel p {
     margin-bottom: 1.2em; */
 
-/* homepage stays wide */
-#right-panel {
-  max-width: none;
-}
-
-/* article text only */
-#right-panel article {
-  max-width: 700px;
+  
+/* readable article column (THIS is the fix) */
+#right-panel .post {
+  max-width: 720px;
   margin: 0 auto;
 }
 
-/* readable typography inside article */
-#right-panel article p {
+/* improve readability */
+#right-panel .post p {
   line-height: 1.8;
   margin-bottom: 1.4em;
 }
 
-/* images inside article */
-#right-panel article img {
+/* images behave like tutorial sites */
+#right-panel .post img {
   display: block;
   max-width: 100%;
   margin: 2em auto;
