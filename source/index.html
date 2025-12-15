@@ -52,58 +52,28 @@ nav li { margin-left:12px }
   #right-panel p {
     margin-bottom: 1.2em; */
 
-  /* ——————————————
-   readable typography
-   —————————————— */
-
-/* improve body font size & colour */
-body {
-  font-size: 16px;
-  color: #f0f0f0; /* light on dark theme — adjust if needed */
+/* homepage stays wide */
+#right-panel {
+  max-width: none;
 }
 
-/* center and constrain the text area */
-#right-panel > * {
+/* article text only */
+#right-panel article {
   max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  margin: 0 auto;
 }
 
-/* section spacing for better content flow */
-#right-panel h1,
-#right-panel h2,
-#right-panel h3 {
-  margin-top: 1.8em;
-  margin-bottom: 0.6em;
-}
-
-#right-panel p {
+/* readable typography inside article */
+#right-panel article p {
+  line-height: 1.8;
   margin-bottom: 1.4em;
-  line-height: 1.75;
 }
 
-/* code blocks */
-#right-panel pre {
-  background: #2d2d2d;
-  padding: 1em;
-  border-radius: 6px;
-  overflow-x: auto;
-}
-
-/* images scaled inside text */
-#right-panel img {
+/* images inside article */
+#right-panel article img {
   display: block;
-  margin: 1.4em auto;
   max-width: 100%;
-}
-
-/* blockquotes — optional */
-#right-panel blockquote {
-  padding-left: 1em;
-  border-left: 4px solid #555;
-  color: #ccc;
+  margin: 2em auto;
 }
 
 </style>
