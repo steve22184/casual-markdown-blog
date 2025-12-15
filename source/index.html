@@ -7,12 +7,35 @@
 /* === GLOBAL BODY & TYPOGRAPHY === */
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 18px;  /* CHANGED: Increased from 16px to 18px */
+    line-height: 1.8; /* CHANGED: Increased from 1.7 to 1.8 */
     color: #333;
     background-color: #fff;
     margin: 0;
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* === TYPOGRAPHY IN CONTENT === */
+#right-panel .post p {
+    margin-bottom: 1.8em; /* CHANGED: Increased from 1.6em */
+    text-align: justify;
+    text-align-last: left;
+    word-wrap: break-word;
+    font-size: 1.05em; /* ADDED: Slightly larger paragraph text */
+}
+
+#right-panel .post h1 { 
+    font-size: 2.8rem;  /* CHANGED: Increased from 2.5rem */
+    margin-top: 1em; 
+    margin-bottom: 1.2em; /* ADDED: More space below h1 */
+}
+#right-panel .post h2 { 
+    font-size: 2.1rem;  /* CHANGED: Increased from 1.8rem */
+    margin-bottom: 1.2em; /* ADDED: More space below h2 */
+}
+#right-panel .post h3 { 
+    font-size: 1.6rem;  /* CHANGED: Increased from 1.4rem */
+    margin-bottom: 1.2em; /* ADDED: More space below h3 */
 }
 
 /* === DARK MODE ADAPTATIONS === */
