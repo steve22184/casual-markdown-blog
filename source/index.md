@@ -39,7 +39,7 @@ h1 { border-bottom:1px dotted grey }
 
 ### Dec 2025
 
-* 2025/12/15: [Zigbee temp sensor with ESP32C6](20251215-Zigbee temperature sensor with an ESP32C6.md) { #zigbee, #featured }
+* 2025/12/15: [Zigbee temp sensor with ESP32C6](20251215-Zigbee temperature sensor with an ESP32C6.md) { #zigbee }
 
 ### Apr 2024
 
