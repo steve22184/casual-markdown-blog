@@ -1,5 +1,3 @@
-# Create a battery-powered Zigbee sensor with an ESP32C6
-
 # Create a battery-powered Zigbee temperature sensor with an ESP32C6
 
 5
@@ -785,13 +783,3 @@ Tell us how we can improve this post?
 Submit Feedback
 
 ## Embedded Content
-
----
-
----
-
----
-
----
-
----
