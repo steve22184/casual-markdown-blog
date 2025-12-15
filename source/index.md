@@ -37,6 +37,10 @@ h1 { border-bottom:1px dotted grey }
 
 # Archives
 
+### Dec 2025
+
+* 2025/12/15: [Build online resume by markdown](20251215T13-Zigbee temperature sensor with an ESP32C6.md) { #markdown }
+
 ### Apr 2024
 
 * 2024/04/18: [Zigbee relay DIY](20240418-Zigbee-relay-in-wall-socket-box.md) { #zigbee, #featured }
