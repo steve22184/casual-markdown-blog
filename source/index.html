@@ -233,14 +233,41 @@ body.dark #right-panel .post code {
     color: #ddd;
 }
 
-/* === IMAGES AT ORIGINAL SIZE === */
+/* === IMAGES AT ORIGINAL SIZE - ALWAYS STACK VERTICALLY === */
 #right-panel .post img {
-    display: block;
+    display: block !important;
     height: auto;
-    /* CRITICAL: Remove max-width to show original size */
-    /* max-width: 100%; */
-    margin: 2.5em auto;
+    float: none !important;
+    clear: both !important;
+    /* Original size but forced to stack */
+    width: auto !important;
+    max-width: none !important;
+    margin: 2.5em auto !important;
     border-radius: 2px;
+}
+
+/* Ensure parent containers don't cause side-by-side layout */
+#right-panel .post p,
+#right-panel .post div,
+#right-panel .post figure {
+    display: block !important;
+    width: 100% !important;
+    float: none !important;
+    clear: both !important;
+}
+
+/* Fix for markdown auto-generated HTML */
+#right-panel .post p:has(img) {
+    text-align: center;
+}
+
+/* Target markdown-generated image containers */
+#right-panel .cm-image,
+#right-panel [class*="image-"],
+#right-panel .post > img {
+    display: block !important;
+    float: none !important;
+    clear: both !important;
 }
 
 /* === BLOCKQUOTES === */
@@ -340,9 +367,10 @@ body.dark a:hover {
     #right-panel .post h2 { font-size: 1.8rem; }
     #right-panel .post h3 { font-size: 1.4rem; }
     
-    /* Mobile images should be responsive */
+    /* Mobile: images should be responsive */
     #right-panel .post img {
-        max-width: 100% !important; /* Only on mobile */
+        max-width: 100% !important;
+        width: 100% !important;
     }
 }
 
