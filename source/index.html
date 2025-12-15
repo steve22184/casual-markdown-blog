@@ -15,6 +15,51 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* === TALLER HEADER (Fixes covered text) === */
+#header {
+    background: #333;
+    color: white;
+    width: 100%;
+    height: 80px; /* CHANGED: Increased from 60px to 80px */
+    transition: background-color 0.3s ease;
+}
+
+#title {
+    float: left;
+    font-size: 20px; /* CHANGED: Slightly larger */
+    font-weight: 700;
+    padding: 12px 8px; /* CHANGED: More vertical padding */
+}
+
+#subtitle {
+    font-size: 80%; /* CHANGED: Slightly larger */
+    padding: 8px;
+    color: #bbb;
+}
+
+/* === LARGER POST METADATA (Date/Tags) === */
+.post-date, .post-tags {
+    font-size: 1em !important; /* CHANGED: Increased from 0.9em to 1em */
+    color: #666;
+    line-height: 1.6;
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+}
+.post-date {
+    font-weight: 600;
+}
+.post-tags a {
+    font-size: 0.95em;
+    padding: 2px 6px;
+    background: #f0f0f0;
+    border-radius: 3px;
+    margin-right: 5px;
+    text-decoration: none;
+}
+.post-tags a:hover {
+    background: #ddd;
+}
+
 /* === MAIN CONTENT HEADINGS === */
 #right-panel .post h1 {
     font-size: 2.8rem; /* Large, prominent title like "Create a battery-powered..." */
@@ -53,45 +98,31 @@ body.dark {
     color: #e0e0e0;
     background-color: #1a1a1a;
 }
+body.dark #header {
+    background: #2a2a2a;
+}
 body.dark #right-panel .post h1,
 body.dark #right-panel .post h2,
 body.dark #right-panel .post h3 {
     color: #f0f0f0;
 }
-
-/* === HEADER STYLES === */
-#header {
-    background: #333;
-    color: white;
-    width: 100%;
-    height: 60px;
-    transition: background-color 0.3s ease;
+body.dark .post-tags a {
+    background: #444;
+    color: #ccc;
 }
-body.dark #header {
-    background: #2a2a2a;
-}
-
-#title {
-    float: left;
-    font-size: 18px;
-    font-weight: 700;
-    padding: 8px;
-}
-
-#subtitle {
-    font-size: 75%;
-    padding: 8px;
-    color: #bbb;
+body.dark .post-tags a:hover {
+    background: #555;
 }
 
 /* === MENU BUTTONS === */
 #menu button, #menu a  { 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
     border: none; 
-    padding: 4px 8px; 
+    padding: 8px 12px; /* CHANGED: More padding */
     color: inherit; 
     background: inherit; 
     cursor: pointer;
+    font-size: 0.95em;
 }
 #menu button:hover, #menu a:hover { 
     color: #222; 
@@ -107,26 +138,43 @@ body.dark #menu button:hover, body.dark #menu a:hover {
     position: absolute;
     left: 0;
     width: 340px;
-    top: 60px;
-    padding: 8px;
+    top: 80px; /* CHANGED: Match new header height */
+    padding: 12px; /* CHANGED: More padding */
     transition: background-color 0.3s ease;
 }
 body.dark #left-panel {
     background-color: #222;
 }
 
-nav p  { 
-    border-bottom: 1px dotted #ccc; 
-    padding: 4px; 
+/* === LEFT PANEL IMPROVEMENTS === */
+nav p {
+    border-bottom: 1px solid #ddd; /* CHANGED: Solid instead of dotted */
+    padding: 10px 8px; /* CHANGED: More vertical padding */
     font-weight: 700;
+    font-size: 1.1em; /* CHANGED: Larger font */
+    margin: 0 0 10px 0;
+    color: #444;
 }
 body.dark nav p {
     border-bottom-color: #555;
     color: #ddd;
 }
-nav li { 
-    margin-left: 12px; 
+
+nav li {
+    margin-left: 12px;
     list-style-type: none;
+    padding: 6px 0; /* ADDED: More spacing between items */
+    font-size: 0.95em;
+}
+nav li a {
+    text-decoration: none;
+    color: #0066cc;
+}
+nav li a:hover {
+    text-decoration: underline;
+}
+body.dark nav li a {
+    color: #4da6ff;
 }
 
 /* === MAIN CONTENT PANEL === */
@@ -134,7 +182,7 @@ nav li {
     position: absolute;
     right: 0;
     left: 360px;
-    top: 60px;
+    top: 80px; /* CHANGED: Match new header height */
     border-left: 1px solid #ddd;
     padding: 4rem 3rem !important;
     background-color: #fff;
@@ -185,14 +233,14 @@ body.dark #right-panel .post code {
     color: #ddd;
 }
 
-/* === IMAGES - ORIGINAL SIZE (Like Tutorial Diagrams) === */
+/* === IMAGES AT ORIGINAL SIZE === */
 #right-panel .post img {
     display: block;
-    height: auto; /* Maintain aspect ratio */
-    /* REMOVE or COMMENT OUT 'max-width: 100%' to allow full size */
+    height: auto;
+    /* CRITICAL: Remove max-width to show original size */
     /* max-width: 100%; */
-    margin: 2.5em auto; /* Keep vertical spacing, center horizontally */
-    border-radius: 2px; /* Very slight rounding, not required */
+    margin: 2.5em auto;
+    border-radius: 2px;
 }
 
 /* === BLOCKQUOTES === */
@@ -236,25 +284,17 @@ body.dark a:hover {
     background: rgba(255, 215, 0, 0.3);
 }
 
-/* === POST METADATA === */
-.post-date, .post-tags {
-    font-size: 0.9em;
-    color: #666;
-}
-body.dark .post-date, body.dark .post-tags {
-    color: #aaa;
-}
-
 /* === RESPONSIVE DESIGN === */
 @media screen and (min-width: 600px) and (max-width: 900px) { 
-    #header { width:100%; height:80px; }
+    #header { width:100%; height: 100px; } /* CHANGED: Increased */
+    #title { padding: 16px 8px; }
     #left-panel { 
         display:none; 
         position:absolute; 
         left:0px!important; 
         width:100%!important; 
-        top:80px; 
-        padding:4px 8px;
+        top: 100px; /* CHANGED: Match new height */
+        padding:8px;
         background-color: #fff;
     }
     body.dark #left-panel {
@@ -264,7 +304,7 @@ body.dark .post-date, body.dark .post-tags {
         position:absolute; 
         left:0px!important; 
         width:100%; 
-        top:80px; 
+        top: 100px; /* CHANGED: Match new height */
         overflow:auto; 
         padding:2rem 1.5rem !important;
         border-left: none;
@@ -272,14 +312,15 @@ body.dark .post-date, body.dark .post-tags {
 }
 
 @media screen and (max-width: 600px) {
-    #header { width:100%; height:100px; }
+    #header { width:100%; height: 120px; } /* CHANGED: Increased */
+    #title { padding: 20px 8px; font-size: 18px; }
     #left-panel { 
         display:none; 
         position:absolute; 
         left:0px!important; 
         width:100%!important; 
-        top:100px; 
-        padding:4px 8px;
+        top: 120px; /* CHANGED: Match new height */
+        padding:8px;
         background-color: #fff;
     }
     body.dark #left-panel {
@@ -289,7 +330,7 @@ body.dark .post-date, body.dark .post-tags {
         position:absolute; 
         left:0px!important; 
         width:100%; 
-        top:100px; 
+        top: 120px; /* CHANGED: Match new height */
         overflow:auto; 
         padding:1.5rem 1rem !important;
         border-left: none;
@@ -299,9 +340,9 @@ body.dark .post-date, body.dark .post-tags {
     #right-panel .post h2 { font-size: 1.8rem; }
     #right-panel .post h3 { font-size: 1.4rem; }
     
-    /* For mobile: images should still be responsive */
+    /* Mobile images should be responsive */
     #right-panel .post img {
-        max-width: 100% !important;
+        max-width: 100% !important; /* Only on mobile */
     }
 }
 
@@ -329,12 +370,20 @@ body.dark .post-date, body.dark .post-tags {
         border: 1px solid #ccc !important;
     }
 }
+
+/* === FORCE original image sizes (fallback) === */
+#right-panel img,
+#right-panel .post img,
+#right-panel .cm-post img {
+    max-width: none !important;
+    width: auto !important;
+}
 </style>
 
 <body>
 
 <div id=header>
-  <span id=menu style="float:right; padding:12px"></span>
+  <span id=menu style="float:right; padding:16px 12px"></span>
   <span id=heading style="float:left">
    <span id=title>casual-markdown</span> 
    <p id=subtitle>simple is the best</p>
