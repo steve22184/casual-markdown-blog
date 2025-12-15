@@ -7,41 +7,56 @@
 /* === GLOBAL BODY & TYPOGRAPHY === */
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-    font-size: 18px;  /* CHANGED: Increased from 16px to 18px */
-    line-height: 1.8; /* CHANGED: Increased from 1.7 to 1.8 */
+    font-size: 19px; /* Increased for larger body text */
+    line-height: 1.75;
     color: #333;
     background-color: #fff;
     margin: 0;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* === TYPOGRAPHY IN CONTENT === */
-#right-panel .post p {
-    margin-bottom: 1.8em; /* CHANGED: Increased from 1.6em */
-    text-align: justify;
-    text-align-last: left;
-    word-wrap: break-word;
-    font-size: 1.05em; /* ADDED: Slightly larger paragraph text */
+/* === MAIN CONTENT HEADINGS === */
+#right-panel .post h1 {
+    font-size: 2.8rem; /* Large, prominent title like "Create a battery-powered..." */
+    margin-top: 0.5em;
+    margin-bottom: 0.8em;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #222;
+    transition: color 0.3s ease;
+}
+#right-panel .post h2 {
+    font-size: 1.9rem; /* Clear section headings like "ESP32C6 Sleep Modes" */
+    margin-top: 2em;
+    margin-bottom: 0.8em;
+    font-weight: 600;
+    color: #222;
+    transition: color 0.3s ease;
+}
+#right-panel .post h3 {
+    font-size: 1.4rem;
+    margin-top: 1.8em;
+    margin-bottom: 0.6em;
+    color: #222;
+    transition: color 0.3s ease;
 }
 
-#right-panel .post h1 { 
-    font-size: 2.8rem;  /* CHANGED: Increased from 2.5rem */
-    margin-top: 1em; 
-    margin-bottom: 1.2em; /* ADDED: More space below h1 */
-}
-#right-panel .post h2 { 
-    font-size: 2.1rem;  /* CHANGED: Increased from 1.8rem */
-    margin-bottom: 1.2em; /* ADDED: More space below h2 */
-}
-#right-panel .post h3 { 
-    font-size: 1.6rem;  /* CHANGED: Increased from 1.4rem */
-    margin-bottom: 1.2em; /* ADDED: More space below h3 */
+/* === PARAGRAPHS AND BODY TEXT === */
+#right-panel .post p {
+    margin-bottom: 1.4em;
+    line-height: 1.8; /* Spacious line height for readability */
+    text-align: left; /* The tutorial uses left alignment, not justify */
 }
 
 /* === DARK MODE ADAPTATIONS === */
 body.dark {
     color: #e0e0e0;
     background-color: #1a1a1a;
+}
+body.dark #right-panel .post h1,
+body.dark #right-panel .post h2,
+body.dark #right-panel .post h3 {
+    color: #f0f0f0;
 }
 
 /* === HEADER STYLES === */
@@ -138,34 +153,6 @@ body.dark #right-panel {
     padding: 2rem 0;
 }
 
-/* === TYPOGRAPHY IN CONTENT === */
-#right-panel .post p {
-    margin-bottom: 1.6em;
-    text-align: justify;
-    text-align-last: left;
-    word-wrap: break-word;
-}
-
-#right-panel .post h1,
-#right-panel .post h2,
-#right-panel .post h3 {
-    font-weight: 600;
-    line-height: 1.3;
-    margin-top: 2.5em;
-    margin-bottom: 1em;
-    color: #222;
-    transition: color 0.3s ease;
-}
-body.dark #right-panel .post h1,
-body.dark #right-panel .post h2,
-body.dark #right-panel .post h3 {
-    color: #f0f0f0;
-}
-
-#right-panel .post h1 { font-size: 2.5rem; margin-top: 1em; }
-#right-panel .post h2 { font-size: 1.8rem; }
-#right-panel .post h3 { font-size: 1.4rem; }
-
 /* === CODE BLOCKS === */
 #right-panel .post pre {
     background-color: #f7f7f7;
@@ -198,13 +185,14 @@ body.dark #right-panel .post code {
     color: #ddd;
 }
 
-/* === IMAGES === */
+/* === IMAGES - ORIGINAL SIZE (Like Tutorial Diagrams) === */
 #right-panel .post img {
     display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 2.5em auto;
-    border-radius: 4px;
+    height: auto; /* Maintain aspect ratio */
+    /* REMOVE or COMMENT OUT 'max-width: 100%' to allow full size */
+    /* max-width: 100%; */
+    margin: 2.5em auto; /* Keep vertical spacing, center horizontally */
+    border-radius: 2px; /* Very slight rounding, not required */
 }
 
 /* === BLOCKQUOTES === */
@@ -307,9 +295,14 @@ body.dark .post-date, body.dark .post-tags {
         border-left: none;
     }
     
-    #right-panel .post h1 { font-size: 2rem; }
-    #right-panel .post h2 { font-size: 1.6rem; }
-    #right-panel .post h3 { font-size: 1.3rem; }
+    #right-panel .post h1 { font-size: 2.2rem; }
+    #right-panel .post h2 { font-size: 1.8rem; }
+    #right-panel .post h3 { font-size: 1.4rem; }
+    
+    /* For mobile: images should still be responsive */
+    #right-panel .post img {
+        max-width: 100% !important;
+    }
 }
 
 @media print {
