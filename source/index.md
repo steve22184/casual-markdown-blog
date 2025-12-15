@@ -1,6 +1,6 @@
 -----------------------------------------------------------------------------
 github     : https://github.com/steve22184/casual-markdown-blog
-title      : Sample Blog (Dark Theme)
+title      : My Markdown Blog
 subtitle   : Simple is the best
 nav-group  : featured, new-3, tags, months
 nav-width  : 320px
