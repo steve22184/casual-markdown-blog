@@ -37,6 +37,10 @@ h1 { border-bottom:1px dotted grey }
 
 # Archives
 
+### Jan 2026
+
+* 2026/01/05: [Personal Home Assistant SkyConnect](20260105-Personal_Home_Assistant_SkyConnect.md) { #zigbee }
+
 ### Dec 2025
 
 * 2025/12/15: [Zigbee temp sensor with ESP32C6](20251215-Zigbee temperature sensor with an ESP32C6.md) { #zigbee }
